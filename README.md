@@ -38,8 +38,8 @@ Browse to the DNS of the load balancer
 # Outcome
 
 ## Sources Used
-* [Docker & Node] (https://nodejs.org/en/docs/guides/nodejs-docker-webapp/)
-* [CloudFormation Template] (https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ecs.html)
+* [Docker & Node](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/)
+* [CloudFormation Template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ecs.html)
 
 ## Issues
 
@@ -64,5 +64,5 @@ docker push "$ECR_REPO:latest"
 
 The secret word is *TwelveFactor*. 
 
-![Screenshot of application](screenshot.png)
+![Application Screenshot](screenshot.png)
 
