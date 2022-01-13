@@ -37,5 +37,32 @@ Browse to the DNS of the load balancer
 
 # Outcome
 
+## Sources Used
+* [Docker & Node] (https://nodejs.org/en/docs/guides/nodejs-docker-webapp/)
+* [CloudFormation Template] (https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ecs.html)
+
+## Issues
+
+* The ECR repository is created when the stack is first created, but it's empty.  
+* When the ECS service starts, it tires to create a task, but it's pointing to the empty ECR repo, so the task will fail cyclically.
+* I do a manual push by running the following commands from the iterate.sh file
+
+```
+docker build -t $LOCAL_TAG .
+
+Push image to ECR
+ECR_AUTH_ENDPOINT="760219392158.dkr.ecr.us-east-1.amazonaws.com"
+ECR_REPO="$ECR_AUTH_ENDPOINT/rearc-test-app-ecrrepo-jfgvzsmgc80k"
+aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $ECR_AUTH_ENDPOINT
+
+docker tag "$LOCAL_TAG:latest" "$ECR_REPO:latest" 
+docker push "$ECR_REPO:latest"
+```
+* After the image is pushed to ECR, the service will work the next time it starts the task.
+
+## Screenshot of the application working
+
+The secret word is *TwelveFactor*. 
+
 ![Screenshot of application](screenshot.png)
 
