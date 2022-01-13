@@ -37,5 +37,5 @@ Browse to the DNS of the load balancer
 
 # Outcome
 
-[! Screenshot of application](screenshot.png)
+![Screenshot of application](screenshot.png)
 
