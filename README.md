@@ -4,13 +4,13 @@
 
 # Quest Requirements
 
-~~If you know how to use git, start a git repository (local-only is acceptable) and commit all of your work to it.~~
-~~Deploy the app in AWS and navigate to the index page. Use Linux 64-bit as your OS (Amazon Linux preferred).~~
-~~Deploy the app in a Docker container. Use node:10 as the base image.~~
-Inject an environment variable (SECRET_WORD) in the Docker container. The value of SECRET_WORD should be the secret word discovered on the index page of the application.
-~~Deploy a load balancer in front of the app.~~
-~~Use Infrastructure as Code (IaC) to "codify" your deployment. Terraform is ideal, but use whatever you know, e.g. CloudFormation, CDK, Deployment Manager, etc.~~
-Add TLS (https). You may use locally-generated certs.
+* ~~If you know how to use git, start a git repository (local-only is acceptable) and commit all of your work to it.~~
+* ~~Deploy the app in AWS and navigate to the index page. Use Linux 64-bit as your OS (Amazon Linux preferred).~~
+* ~~Deploy the app in a Docker container. Use node:10 as the base image.~~
+* Inject an environment variable (SECRET_WORD) in the Docker container. The value of SECRET_WORD should be the secret word discovered on the index page of the application.
+* ~~Deploy a load balancer in front of the app.~~
+* ~~Use Infrastructure as Code (IaC) to "codify" your deployment. Terraform is ideal, but use whatever you know, e.g. CloudFormation, CDK, Deployment Manager, etc.~~
+* Add TLS (https). You may use locally-generated certs.
 
 # Approach
 
