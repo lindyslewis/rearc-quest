@@ -1,6 +1,7 @@
 # Rearc Quest
 
-# Goal: Run a Dockerized nodejs app on ECS behind a load balancer
+Goal: Run a Dockerized nodejs app on ECS behind a load balancer  
+[https://github.com/rearc/quest](https://github.com/rearc/quest)
 
 # Quest Requirements
 
@@ -41,7 +42,7 @@ Browse to the DNS of the load balancer
 * [Docker & Node](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/)
 * [CloudFormation Template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ecs.html)
 
-## Issues
+## Manual Steps
 
 * The ECR repository is created when the stack is first created, but it's empty.  
 * When the ECS service starts, it tires to create a task, but it's pointing to the empty ECR repo, so the task will fail cyclically.
